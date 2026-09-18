@@ -1,700 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SmarTech | Smart Technology, Smarter Life</title>
+  <title>SmarTech — Smart Technology for Everyone</title>
+  <meta name="description" content="SmarTech — discover smart technology, AI, gadgets, trends and useful digital ideas.">
 
-<meta name="description" content="SmarTech — discover smart technology, gadgets, AI tools, trends and useful tech tips.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0f14;
-    color: #ffffff;
-    line-height: 1.6;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* HEADER */
-header {
-    background: rgba(11,15,20,0.96);
-    border-bottom: 1px solid #202832;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    min-height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.logo span {
-    color: #35d6ff;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: #c8d0d9;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #35d6ff;
-}
-
-/* HERO */
-.hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background:
-        radial-gradient(circle at 50% 20%, #17364a 0%, transparent 38%),
-        linear-gradient(180deg, #101820 0%, #0b0f14 100%);
-}
-
-.hero-content {
-    max-width: 850px;
-    margin: auto;
-    padding: 80px 0;
-}
-
-.badge {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 1px solid #2a8aa5;
-    border-radius: 30px;
-    color: #55ddff;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: clamp(44px, 8vw, 78px);
-    line-height: 1.05;
-    margin-bottom: 25px;
-    letter-spacing: -3px;
-}
-
-.hero h1 span {
-    color: #35d6ff;
-}
-
-.hero p {
-    color: #b6c0ca;
-    font-size: 20px;
-    max-width: 680px;
-    margin: 0 auto 35px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 27px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: #35d6ff;
-    color: #061018;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    background: #72e5ff;
-}
-
-.btn-secondary {
-    border: 1px solid #394652;
-    color: #ffffff;
-}
-
-.btn-secondary:hover {
-    border-color: #35d6ff;
-    color: #35d6ff;
-}
-
-/* SECTION */
-section {
-    padding: 85px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: #9da8b3;
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: #121820;
-    border: 1px solid #26313c;
-    border-radius: 16px;
-    padding: 30px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: #35d6ff;
-}
-
-.icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #172d38;
-    color: #35d6ff;
-    font-size: 27px;
-    margin-bottom: 22px;
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #9da8b3;
-}
-
-/* FEATURE */
-.feature {
-    background: #10161d;
-}
-
-.feature-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.feature-visual {
-    min-height: 350px;
-    border-radius: 22px;
-    border: 1px solid #2b3945;
-    background:
-        radial-gradient(circle at center, #214a5d 0%, transparent 55%),
-        #0b1117;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.tech-circle {
-    width: 190px;
-    height: 190px;
-    border: 2px solid #35d6ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 42px;
-    box-shadow: 0 0 45px rgba(53,214,255,0.18);
-}
-
-.feature-text h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.feature-text p {
-    color: #aab4be;
-    margin-bottom: 25px;
-}
-
-/* BRAND FAMILY */
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.brand {
-    padding: 28px;
-    border-radius: 15px;
-    background: #121820;
-    border: 1px solid #26313c;
-}
-
-.brand h3 {
-    font-size: 23px;
-    margin-bottom: 8px;
-}
-
-.brand h3 span {
-    color: #35d6ff;
-}
-
-.brand p {
-    color: #929da8;
-}
-
-/* NEWSLETTER */
-.newsletter {
-    text-align: center;
-    background:
-        radial-gradient(circle at center, #173646 0%, #0b0f14 65%);
-}
-
-.newsletter-box {
-    max-width: 700px;
-    margin: auto;
-}
-
-.newsletter h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.newsletter p {
-    color: #aab4be;
-    margin-bottom: 28px;
-}
-
-.subscribe {
-    display: flex;
-    max-width: 550px;
-    margin: auto;
-    gap: 10px;
-}
-
-.subscribe input {
-    flex: 1;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #35424e;
-    background: #111820;
-    color: white;
-    outline: none;
-}
-
-.subscribe input:focus {
-    border-color: #35d6ff;
-}
-
-/* FOOTER */
-footer {
-    background: #080b0f;
-    border-top: 1px solid #202832;
-    padding: 45px 0 25px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.footer-logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.footer-logo span {
-    color: #35d6ff;
-}
-
-.footer-text {
-    color: #7f8a95;
-    max-width: 400px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 22px;
-    color: #9ca7b2;
-}
-
-.footer-links a:hover {
-    color: #35d6ff;
-}
-
-.copyright {
-    border-top: 1px solid #1c252e;
-    margin-top: 35px;
-    padding-top: 20px;
-    color: #68737e;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* MOBILE */
-@media (max-width: 800px) {
+    /* NAVIGATION */
 
     nav {
-        display: none;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.95);
+      border-bottom: 1px solid #1c3048;
+      backdrop-filter: blur(10px);
     }
 
-    .cards,
-    .brand-grid {
-        grid-template-columns: 1fr;
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .feature-box {
-        grid-template-columns: 1fr;
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
+
+    .logo span {
+      color: #00d9ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d7e4f3;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00d9ff;
+    }
+
+    /* HERO */
 
     .hero {
-        min-height: 580px;
-    }
-
-    .hero h1 {
-        letter-spacing: -2px;
-    }
-
-    .feature-text h2 {
-        font-size: 34px;
-    }
-
-    .subscribe {
-        flex-direction: column;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <div class="container navbar">
-
-        <a href="#" class="logo">
-            Smar<span>Tech</span>
-        </a>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#explore">Explore</a>
-            <a href="#brands">Brands</a>
-            <a href="#about">About</a>
-        </nav>
-
-    </div>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-    <div class="container hero-content">
-
-        <div class="badge">THE SMARTER SIDE OF TECHNOLOGY</div>
-
-        <h1>
-            Technology for a<br>
-            <span>Smarter Life.</span>
-        </h1>
-
-        <p>
-            Discover smart gadgets, useful technology, artificial intelligence,
-            digital trends and clever ideas — all in one place.
-        </p>
-
-        <div class="buttons">
-            <a href="#explore" class="btn btn-primary">
-                Explore SmarTech
-            </a>
-
-            <a href="#brands" class="btn btn-secondary">
-                Discover Our Brands
-            </a>
-        </div>
-
-    </div>
-</section>
-
-
-<section id="explore">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Explore SmarTech</h2>
-            <p>Ideas, tools and technology designed for the modern world.</p>
-        </div>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="icon">⚡</div>
-                <h3>Smart Gadgets</h3>
-                <p>
-                    Discover useful gadgets and innovative technology
-                    that can make everyday life easier.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🤖</div>
-                <h3>SmarT AI</h3>
-                <p>
-                    Explore artificial intelligence, AI tools,
-                    productivity ideas and the future of digital technology.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="icon">📈</div>
-                <h3>SmarTrend</h3>
-                <p>
-                    Keep up with emerging technology, digital trends
-                    and interesting developments from the tech world.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="feature" id="about">
-
-    <div class="container feature-box">
-
-        <div class="feature-visual">
-            <div class="tech-circle">
-                ST
-            </div>
-        </div>
-
-        <div class="feature-text">
-
-            <h2>Think Smart.<br>Live Smart.</h2>
-
-            <p>
-                SmarTech is being built as a destination for people who
-                want technology to be useful, understandable and exciting.
-            </p>
-
-            <p>
-                From gadgets and AI to digital ideas and technology trends,
-                our goal is simple: discover what's useful and make it easier
-                to understand.
-            </p>
-
-            <a href="#brands" class="btn btn-primary">
-                Explore More
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="brands">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>The SmarT Family</h2>
-            <p>A growing family of smart digital ideas.</p>
-        </div>
-
-        <div class="brand-grid">
-
-            <div class="brand">
-                <h3>Smar<span>Tech</span></h3>
-                <p>
-                    Technology, gadgets and digital innovation.
-                </p>
-            </div>
-
-            <div class="brand">
-                <h3>Smar<span>Time</span></h3>
-                <p>
-                    Ideas and tools for making better use of time.
-                </p>
-            </div>
-
-            <div class="brand">
-                <h3>Smar<span>Trend</span></h3>
-                <p>
-                    What's changing in technology and the digital world.
-                </p>
-            </div>
-
-            <div class="brand">
-                <h3>Smar<span>Trick Pick</span></h3>
-                <p>
-                    Clever picks, useful discoveries and smart choices.
-                </p>
-            </div>
-
-            <div class="brand">
-                <h3>Smar<span>T AI</span></h3>
-                <p>
-                    Artificial intelligence, tools and possibilities.
-                </p>
-            </div>
-
-            <div class="brand">
-                <h3>Smar<span>Top Gadgets</span></h3>
-                <p>
-                    Interesting gadgets worth discovering.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="newsletter">
-
-    <div class="container newsletter-box">
-
-        <h2>Stay SmarT</h2>
-
-        <p>
-            Get interesting technology ideas, discoveries and updates.
-        </p>
-
-        <div class="subscribe">
-
-            <input
-                type="email"
-                placeholder="Enter your email"
-                aria-label="Email address"
-            >
-
-            <button class="btn btn-primary" onclick="subscribeUser()">
-                Subscribe
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-content">
-
-            <div>
-                <div class="footer-logo">
-                    Smar<span>Tech</span>
-                </div>
-
-                <p class="footer-text">
-                    Smart technology. Useful ideas. A smarter digital life.
-                </p>
-            </div>
-
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#explore">Explore</a>
-                <a href="#brands">Brands</a>
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            © 2026 SmarTech. All rights reserved.
-        </div>
-
-    </div>
-
-</footer>
-
-
-<script>
-
-function subscribeUser() {
-
-    const email = document.querySelector(
-        'input[type="email"]'
-    ).value;
-
-    if (!email) {
-        alert("Please enter your email address.");
-        return;
-    }
-
-    alert("Thank you for joining SmarTech!");
-}
-
-</script>
-
-</body>
-</html>
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        radial-gradient(circle at 50% 20%, #123c5a 0%, #07111f 55%),
+        #07111f;
+   
